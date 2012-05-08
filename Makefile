@@ -1,6 +1,6 @@
 # makefile for protocol
 all:
-	pdflatex ./*.tex
+	pdflatex poAusarbeitung.tex
 
 clean: 
 	rm -f *.aux *.log *.pdf
