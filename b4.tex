@@ -1,14 +1,47 @@
 \section*{B.4 Automation in der KFZ-Elektronik}
 
-\subsection{Beschreiben Sie die Prozessschritte zur Herstellung eines Steuergerätes auf Leiterplatte.}
+\subsection{Beschreiben Sie die Prozessschritte zur Herstellung eines Steuergerätes auf Leiterplatte. (S.75,79,80)}
+1. SMD line top (Bestückung der Oberseite der LP) \\
+2. SMD line bottom (Bestückung der Unterseite) \\
+3. manual insertion (Bestückoperationen für nicht-SMD-Komponenten [Relais, Stecker, ..]) \\
+4. assembly (Montage der LP mit Steckern und Gehäuse)
 
-\subsection{Wie kann die Kennzeichnung eines Steuergerätes erfolgen? Wie kann sie elektronisch erfasst werden? Wozu ann die Kennzeichnung verwendet werden?}
+\subsection{Wie kann die Kennzeichnung eines Steuergerätes erfolgen? Wie kann sie elektronisch erfasst werden? Wozu kann die Kennzeichnung verwendet werden? (S.75, 81)}
+Kennzeichnung per \emph{Laser Marking} (Nummer wird in LP ``eingebrannt'') oder Draufkleben einer
+Etikette; entweder OCR (Text/Zahlen), Barcode oder Datenmatrix
 
-\subsection{Beschreiben Sie die Prozessschritte an der Oberseite eines Steuergerätes auf Leiterplatte.}
+Verwendung: Gerätenummer, Seriennummer, Produktionsdatum $\rightarrow$ traceability (zB: wenn eine
+Serie eines IC's Probleme macht, der auf dem Steuergerät platziert wurde, können die Steuergeräte
+``lokalisiert'' werden [jene Seriennummer sind bekannt, auf denen der fehlerhafte IC ist] und 
+gegebenenfalls ausgetauscht werden)
 
-\subsection{Beschreiben Sie die grundlegenden Lötverfahren zur Anbringung und Kontaktierung gehäuster Bauteile auf Leiterplatte und nennen Sie Anwendungsbeispiele.}
+\subsection{Beschreiben Sie die Prozessschritte an der Oberseite eines Steuergerätes auf Leiterplatte. (S.75,83-89)}
+1. Lötpaste auftragen \\
+2. Sichtkontrolle: Automatische optische Inspektion der Lötpaste (AOI) \\
+3. Platzierung der SMD-Bauteile \\
+4. Schmelzen der Lötpaste (Reflow Soldering) \\
+5. Sichtkontrolle: AOI vom PCB (mit Kameras überprüfen ob: Bauteile überall draufsitzen und richtig 
+sitzen, Lötqualität
 
-\subsection{Nennen Sie die Herstellverfahren beidseitig bestückter Steuergeräte auf Leiterplatte.}
+\subsection{Beschreiben Sie die grundlegenden Lötverfahren zur Anbringung und Kontaktierung gehäuster Bauteile auf Leiterplatte und nennen Sie Anwendungsbeispiele. (S.76,97-98)}
+\begin{description}
+%\item[Reflow Löten (reflow soldering):]
+\item[Schwall-Löten (wave soldering):] Flussmittel aufsprühen $\rightarrow$ vorheizen $\rightarrow$ 
+  LP wird über eine Lötwelle gefahren - pumpt flüssiges Lot durch eine Öffnung in der Welle auf die 
+  LP (Unterseite der LP wird somit verlötet)
+\item[Minischwall-Löten (mini wave soldering):] ???
+\end{description}
+
+\subsection{Nennen Sie die Herstellverfahren beidseitig bestückter Steuergeräte auf Leiterplatte. (S.76,91-94)}
+\begin{description}
+\item[Reflow/Reflow:] die LP-Seiten werden seperat/hintereinander bestückt und das Reflow Soldering 
+  durchgeführt (funktioniert bei ``leichten'' Bauteilen - das neuerliche Erwärmen der Unterseite im 
+  Ofen, lässt die Bauteile nicht herunterfallen);
+\item[Reflow/Wave:] eine LP-Seite wird mittels Reflow Soldering aufgetragen (Oberseite) 
+  $\rightarrow$ Kleber für jedes Bauteil auf der anderen (Unter-)Seite auftragen (mit Roboterarm 
+  oder Sieb) $\rightarrow$ bestücken $\rightarrow$ Kleber eventuell härten (durch den Ofen schieben) 
+  und anschließend Schwall-Löten der Unterseite
+\end{description}
 
 \subsection{Beschreiben Sie alle Prüfschritte bei der Herstellung von Steuergeräten.}
 
