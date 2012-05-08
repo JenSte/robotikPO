@@ -1,0 +1,38 @@
+\section{A.3 Toleranzausgleich, Sensorik, Bewegungsführung}
+
+\subsubsection*{Beschreiben Sie die zwei prinzipiellen Methoden zum Toleranzausgleich und 
+  nennen Sie Beispiele. (S.42,45)}
+\begin{description}
+\item[aktiv:] Roboter nachjustieren/positionieren; Bewegungsführung; 
+
+  Bsp. 1: Stift in eine
+  Bohrung setzen $\rightarrow$ mit Sensor Bohrung \emph{suchen} (laufendes Erfassen während 
+  Bewegung) oder \emph{messen} (Momentaufnahme); 
+
+  Bsp. 2: Bauteil für LP-Bestückung aufnehmen
+  $\rightarrow$ Momentaufnahme/Bild von Sauger und Bauteil machen (Position messen) und 
+  anschließend zentrieren
+\item[passiv:] Toleranz verursacht ``elastische Verformung''; nachgiebige Regelung; 
+
+  Bsp.: Stift in eine Bohrung
+  setzen $\rightarrow$ Werkstück so gestalten, dass die Toleranz eine Kraft hervorruft und 
+  den Greifer \emph{passiv} bewegt (keine Ecken, sondern Schrägen - hier: angefaster Stift
+  und Bohrung)
+\end{description}
+
+\subsubsection*{Beschreiben Sie das Prinzip der Sensorführung von Industrierobotern. Unter
+  welchen Bedingungen ist Sensorführung sinnvoll? Welche Probleme sind dabei zu beachten? 
+  (S.42,50)}
+Prinzip: Abweichung zwischen Effektor und Werkstück messen/suchen $\rightarrow$ Rückführung
+an Steuerung $\rightarrow$ Auswertung und Regelung der Achsen/Antriebe
+
+Sinnvoll wenn: Bewegung störanfällig oder komplex (Korrektur der Bahn mit Sensoren), 
+große Werkstücktoleranzen, hohe Genauigkeitsanforderungen, biegeschlaffe Werkstücke, 
+keine geordnete Bereitstellung möglich (vgl. Stapel von Scheiben für die Montage in ein
+Fahrzeug), ... (S.50)
+
+Probleme: - zusätzlicher Engineering-Aufwand (Regelung anstatt ``nur'' Steuerung); - keine
+einheitlichen Sensorschnittstellen vorhanden; - hohe Sensorkosten; - geringe 
+Systemverfügbarkeit; - mangelnde Fähigkeiten der Steuerungen zur Umsetzung von
+Sensorsignalen in Bewegungsmodifikationen; - unzureichende dynamische Eigenschaften der 
+Steuerungen
