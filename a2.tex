@@ -1,21 +1,20 @@
-\section{A.2 Industrieroboter}
+\section*{A.2 Industrieroboter}
 
-\subsubsection*{Beschreiben Sie die Teilsysteme eines Industrieroboters und deren Funktion 
-  (S.6,20)}
+\subsection{Beschreiben Sie die Teilsysteme eines Industrieroboters und deren Funktion (S. 6, 20)}
 \begin{description}
-\item[Kinematik:] bewegt die Fertigungseinrichtung zum Werkstück (räumliche Zuordnung zw. 
-  Werkstück und Fertigungseinrichtung); besteht aus Achsen, Antrieben, internen Sensoren, 
-  Effektoren;
-\item[Antrieb:] Übertragung/Umwandlung der Energie bis hin zum Effektor
-\item[Steuerung:] Umsetzung des Anwenderprogramms in eine Bewegung; Ein- und Ausgabeoperationen
-  zur Steuerung von Abläufen; Informationseingabe und -speicherung;
-\item[Messsystem:] Lage- und Geschwindigkeitmessungen der Achsen
-\item[Effektor:] Werstück-, Werkzeug-, Prüfmittelaufnahme
-\item[Externe Sensoren (optional):] Toleranzausgleich (zB: Kamera überprüft Abstand zum 
-  Werkstück); Lage- und Mustererkennung; 
+	\item[Kinematik:] bewegt die Fertigungseinrichtung zum Werkstück (räumliche Zuordnung zw. 
+	  Werkstück und Fertigungseinrichtung); besteht aus Achsen, Antrieben, internen Sensoren, 
+	  Effektoren;
+	\item[Antrieb:] Übertragung/Umwandlung der Energie bis hin zum Effektor
+	\item[Steuerung:] Umsetzung des Anwenderprogramms in eine Bewegung; Ein- und Ausgabeoperationen
+	  zur Steuerung von Abläufen; Informationseingabe und -speicherung;
+	\item[Messsystem:] Lage- und Geschwindigkeitmessungen der Achsen
+	\item[Effektor:] Werstück-, Werkzeug-, Prüfmittelaufnahme
+	\item[Externe Sensoren (optional):] Toleranzausgleich (zB: Kamera überprüft Abstand zum 
+	  Werkstück); Lage- und Mustererkennung; 
 \end{description}
 
-\subsubsection*{Beschreiben Sie die Bauformen von Industrierobotern (S.7)}
+\subsection{Beschreiben Sie die Bauformen von Industrierobotern (S.7)}
 \begin{description}
 \item[Portalroboter:] steife Struktur; rechteckiges oder quaderförmiges Industrieportal; 
   für große Arbeitsbereiche; Anw.: Transport von schweren Lasten, Verkettung von 
@@ -30,7 +29,7 @@
 \end{description}
 \includegraphics[width=\textwidth]{pics/bauarten}
 
-\subsubsection*{Nennen Sie Beispiele für Effektoren. Welche Vor- bzw. Nachteile haben pneumatische 
+\subsection{Nennen Sie Beispiele für Effektoren. Welche Vor- bzw. Nachteile haben pneumatische 
 Greifer? (S.8,9,29-34)}
 3 Arten: Greifer (Montage, Handhabung), Werkzeug (Schweißen, Schraubenzieher, Lackpistole), 
 Prüfmittel (Sensoren)
@@ -53,11 +52,11 @@ Prüfmittel (Sensoren)
 \item[Werkzeugwechselsysteme:] Roboter wechselt die Greifer; - lange Taktzeiten;
 \end{description}
 
-\subsubsection*{Nennen Sie Kriterien zur Auswahl eines Werkzeugwechselsystem. (S.34)}
+\subsection{Nennen Sie Kriterien zur Auswahl eines Werkzeugwechselsystem. (S.34)}
 Zulässige Kräfte und Momente, Anzahl der Steueranschlüsse, Anzahl der unterscheidbaren 
 Werkzeuge, Einfahrtoleranzen, Spielfreiheit, Nothaltevermögen, Gewicht, Abmessungen, Preis
 
-\subsubsection*{Beschreiben Sie die verschiedenen Steuerungsarten von Industrierobotern. Zeichnen
+\subsection{Beschreiben Sie die verschiedenen Steuerungsarten von Industrierobotern. Zeichnen
   Sie eine Beispielskizze für die resultierende Bahn zwischen 2 Punkten bei einem 
   Industrieroboter mit 2 rotatorischen Achsen. (S.9,35-37)}
 \begin{description}
@@ -71,10 +70,11 @@ Werkzeuge, Einfahrtoleranzen, Spielfreiheit, Nothaltevermögen, Gewicht, Abmessu
 \end{description}
 \includegraphics[width=.4\textwidth]{pics/ptp_bsp}
 
-\subsubsection*{Was versteht man unter Folgeprogrammierung? Beschreiben Sie Vor- und Nachteile
-  im Vergleich zu Off-line-Programmierung. (nicht gefunden) \\ bzw. \\
-  Was versteht man unter Teach-In Programmierung? Beschreiben Sie Vor- und Nachteile im 
-  Vergleich zu Off-line-Programmierung. (S.10,38)}
+\subsection{Was versteht man unter Folgeprogrammierung? Beschreiben Sie Vor- und Nachteile im Vergleich zu Off-line-Programmierung.}
+
+Folgeprogrammierung = Master-Slave??
+
+\subsection{ Was versteht man unter Teach-In Programmierung? Beschreiben Sie Vor- und Nachteile im Vergleich zu Off-line-Programmierung. (S.10,38)}
 \begin{description}
 \item[Einstellverfahren:] Punkte oder Bahn im Zeitraster einfach übernehmen (händisch, taktil,
   oder optisch positionieren); + schnell; + einfach; - ungenau;
@@ -87,4 +87,3 @@ Werkzeuge, Einfahrtoleranzen, Spielfreiheit, Nothaltevermögen, Gewicht, Abmessu
   ausfallen); Simulation der Bewegung mit CAD-Daten; - ungenau, weil nur absolute Genauigkeit 
   des Roboters verwendet wird;
 \end{description}
-Folgeprogrammierung = Master-Slave??
