@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% some size definitions and counter settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\topmargin 0pt
+%\headsep 10pt
+\textheight 22.5cm
+\textwidth 15.1cm
+
+\setcounter{totalnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{topnumber}{3}
+
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define and init variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setcounter{footnote}{0} 
+\setcounter{page}{1}
+
+% initialize variables
+\newcommand{\varHeadline}{}            
+\newcommand{\varSubtitle}{}
+\newcommand{\varAuthors}{
+  {\large Denise Ratasich \par}
+  {\small 
+    Kennzahl 066938 | MatrNr: 0826389
+  }
+}
+
+\newcommand{\headline}[1]{\renewcommand{\varHeadline}{#1}}
+\newcommand{\subtitle}[1]{\renewcommand{\varSubtitle}{#1}}
+\newcommand{\authors}[1]{\renewcommand{\varAuthors}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% titlepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\maketitle{
+
+\begin{center}
+% heading
+{\Huge\bf \varHeadline \par} 
+%\vskip 0.5cm
+
+% title
+{\Large\bf \varSubtitle} 
+\end{center}
+%\vskip 0.5cm
+
+%\begin{minipage}[t]{0.5\textwidth}
+%  \varAuthors
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{0.5\textwidth}
+%  \begin{flushright}
+%    \today{}
+%  \end{flushright}
+%\end{minipage}
+
+%\vskip 0.7cm 
+\rule{\textwidth}{0.5pt}
+\vskip 0.5cm
+
+} % \def\maketitle
+
+
+
+
