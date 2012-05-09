@@ -3,3 +3,5 @@
 
 * robotikPo
   Ausarbeitung des Fragenkatalogs zu "Robotik und Automation in der KFZ-Elektronik"
+
+denise: ich mach jetzt kapitel B.4 fertig ...
