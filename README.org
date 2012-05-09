@@ -2,4 +2,4 @@
 
 
 * robotikPo
-  Ausarbeitung des Fragenkatalogs zu "Robotik und Automation in der KFZ-Automation"
+  Ausarbeitung des Fragenkatalogs zu "Robotik und Automation in der KFZ-Elektronik"
