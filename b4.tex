@@ -25,11 +25,15 @@ sitzen, Lötqualität
 
 \subsection{Beschreiben Sie die grundlegenden Lötverfahren zur Anbringung und Kontaktierung gehäuster Bauteile auf Leiterplatte und nennen Sie Anwendungsbeispiele. (S.76,97-98)}
 \begin{description}
-%\item[Reflow Löten (reflow soldering):]
+\item[Reflow Löten (reflow soldering):] siehe auch letzte Frage - Paste $\rightarrow$ Bauteile
+  platzieren $\rightarrow$ schmelzen (durch den Ofen fahren)
 \item[Schwall-Löten (wave soldering):] Flussmittel aufsprühen $\rightarrow$ vorheizen $\rightarrow$ 
   LP wird über eine Lötwelle gefahren - pumpt flüssiges Lot durch eine Öffnung in der Welle auf die 
-  LP (Unterseite der LP wird somit verlötet)
-\item[Minischwall-Löten (mini wave soldering):] ???
+  LP (Unterseite der LP wird somit verlötet) $\rightarrow$ gleichmäßige Benetzung der Oberfläche mit
+  Lot
+\item[Minischwall-Löten (mini wave soldering):] lokal begrenzt (anstatt einer Welle wird nur ein 
+  ``Kamin'' verwendet) $\rightarrow$ Teile von einer LP verlöten, kein komplettes Bad (zB nur die 
+  Stecker am Rand); meist keine optische Inspektion danach
 \end{description}
 
 \subsection{Nennen Sie die Herstellverfahren beidseitig bestückter Steuergeräte auf Leiterplatte. (S.76,91-94)}
@@ -43,12 +47,75 @@ sitzen, Lötqualität
   und anschließend Schwall-Löten der Unterseite
 \end{description}
 
-\subsection{Beschreiben Sie alle Prüfschritte bei der Herstellung von Steuergeräten.}
+\subsection{Beschreiben Sie alle Prüfschritte bei der Herstellung von Steuergeräten. (S.76,99-101,108)}
+\begin{description}
+\item[Automatic Optical Inspection (AOI):] mit Kameras wird überprüft...
 
-\subsection{Wozu werden Verguss- und Klebeprozesse bei der Herstellung von Steuergerätesn eingesetzt? We kann Kleber bzw. Verguss aufgebracht werden?}
+  - Bauteil vorhanden und Position \\
+  - Lotqualität (zB: Kurzschluss zwischen 2 Lötstellen, keine/unzureichende Verlötung)
 
-\subsection{Beschreiben Sie die Prozessschritte zur Herstellung eines Steuergerätes auf keramischen Schaltungsträgern.}
+  meist konservativ eingestellt - bei möglichen Fehler(n) wird die LP ausgeworfen und muss von 
+  Hand untersucht werden;
+\item[In Circuit Test (ICT):] auf der LP werden Testpunkte vorgesehen oder Durchkontaktierungen 
+  verwendet um mit einem Nadeladapter zu testen ob...
 
-\subsection{Welche Vor- und Nachteile haben Steuergeräte auf keramischen Schaltungsträgern? Nennen Sie typische Anwendungsbeispiele in der Automobiltechnik.}
+  - alle Komponenten platziert sind \\
+  - Werte von Kondensatoren, Widerständen stimmen \\
+  - Brücken, Verbindungen passen \\
+  - traceability \\
+  - programming / Funktion (grob) testen 
+\item[Durchlauftunnelanlage (DTA):] finaler Stresstest und funktionaler Test - meist wird das Gerät 
+  bei -40$^{\circ}$C und 85$^{\circ}$C und Raumtemperatur in Betrieb genommen um Frühausfälle (infant 
+  mortality, siehe Badewannenkurve) auszusortieren
+\end{description}
 
-\subsection{Beschreiben Sie die mechanische und elektrische Anbindung von ungehäusten Halbleitern auf keramischen Schaltungsträgern.}
+\subsection{Wozu werden Verguss- und Klebeprozesse bei der Herstellung von Steuergerätesn eingesetzt? Wie kann Kleber bzw. Verguss aufgebracht werden? (S.77,109-110,112)}
+Verguss/Kleber: wasserdicht, Korrosionsschutz, ...
+
+- complete potting (kompletter Verguss von Bauelementen auf LP mit dem Gehäuse) \\
+- partly potting (nur teilweiser Verguss - LP und Gehäuse) \\
+- Verguss einer Öffnung (``Loch flicken'') \\
+- Verguss zur Vibrationsdämpfung (zB bei Beschleunigungssensoren im Airbag)
+
+anstatt Kleben empfiehlt sich eine \emph{Orbital Friction Welding Connection} (= 2 Kunststoffteile
+werden so aneinander gereibt, dass die Teile verschmelzen $\rightarrow$ + schnell, + stark, + nur
+lokale Erwärmung);
+
+\subsection{Beschreiben Sie die Prozessschritte zur Herstellung eines Steuergerätes auf keramischen Schaltungsträgern. (S.77-78,115-118,120-124)}
+\begin{description}
+\item[1. SMD line:] Silberleitkleber auftragen (Siebdruck) und mit SMD-Bauteile (zB: Kondensatoren) 
+  bestücken
+
+  auf die Unterseite werden meist die Widerstände mit einer Paste (hohe Toleranzen) aufgedruckt; um
+  den Widerstandswert ``einzustellen'', werden die Widerstände gelasert (Widerstand erhöht sich) und 
+  anschließend getrimmt (solange ``angeschnitten'' bis der Wert passt); \emph{= Laser Trimming of
+    Printed Thick Film Circuit}
+\item[2a. Die Bonding / Wire Bonding:] Kleber für IC's auftragen $\rightarrow$ Bestückung mittels
+  Pick \& Place (vom Wafer auf Folie) $\rightarrow$ Verbindung der Bauelemente mit Schaltungsträger
+  mittels Golddrahtbonden (Stecker, Leistungsstufen, ... werden mittels Dickdrahtbonden kontaktiert
+  - meist Aluminiumdrähte)
+\item[2b. Power Stage:] Bestückung der Leistungsendstufen, w.o. oder mit anderen Technologien 
+  (für bessere thermische Anbindung, zB \emph{Direct Copper Bonding} - IC liegt auf besserem 
+  Wärmeleiter KUPFER)
+\item[3. assembly:] Montage wie bei Leiterplatten (oft Komplettverguss)
+\end{description}
+wie bei Leiterplatten werden zwischen den Schritten Prüfverfahren durchgeführt (AOI, ICT, ..)
+
+\subsection{Welche Vor- und Nachteile haben Steuergeräte auf keramischen Schaltungsträgern? Nennen Sie typische Anwendungsbeispiele in der Automobiltechnik. (S.114)}
++ hohe Arbeitstemperaturen ($<$155$^{\circ}$C) \\
++ hält Vibrationen viel besser aus (LP würde brechen) \\
+$\rightarrow$ + kann zB direkt an den Motor montiert werden \\
++ kleine Baugröße \\
++ gute thermische Leitfähigkeit (Wärme kann besser abgeführt werden) \\
++ kosteneffektiv, umweltfreundlich, hohe Innovationsrate, ...
+
+- aufwendige Herstellung \\
+- Bestücken von IC's ohne Package viel langsamer
+
+\subsection{Beschreiben Sie die mechanische und elektrische Anbindung von ungehäusten Halbleitern auf keramischen Schaltungsträgern. (S.119)}
+\begin{description}
+\item[Wedge-Wedge bonding:] (Dickdrathbonden) Draht wird durch ein eigenes Werkzeug platziert und 
+  mittels Bond-Werkzeug verschweißt;
+\item[Ball-Wedge bonding:] (Dünndrahtbonden) das Bond-Werkzeug führt gleichzeitig den Draht mit; 
+  Draht wird platziert $\rightarrow$ durch Reibung ``verschweißt'' und anschließend ``abgerissen'';
+\end{description}
