@@ -1,12 +1,52 @@
 \section*{B.6 Fallbeispiel Powertrain Management}
 
-\subsection{Beschreiben Sie die Steuerungsarchitekturen f\"ur den Antriebsstrang eines Automobils und erl\"autern Sie die zugrunde liegende Philosophie. Welche Unterschiede ergeben sich, wenn innerhalb einer Plattform unterschiedliche Getreibetypen mit unterschiedlichen Motorisierungen kombiniert werden?}
+\subsection{Beschreiben Sie die Steuerungsarchitekturen f\"ur den Antriebsstrang eines Automobils und erl\"autern Sie die zugrunde liegende Philosophie. Welche Unterschiede ergeben sich, wenn innerhalb einer Plattform unterschiedliche Getriebetypen mit unterschiedlichen Motorisierungen kombiniert werden? (S.149-150)}
+\begin{description}
+\item[Full Powertrain Control Architecture:] Alle Komponenten des Antriebsstranges (Motor inkl. 
+  Gemischaufbereitung, Getriebe, Verteilergetriebe) werden zentral durch ein Steuergerät 
+  gesteuert (bzw. geregelt).
+\item[Stand Alone C.A.:] Jede Komponente des Antriebsstranges wird durch ein von der Komponente
+  getrenntes Steuergerät gesteuert. = Mechatronik im funktionalen Sinn
+\item[Mechatronic Module C.A.:] Jede Komponente des Antriebsstranges wird durch ein in die 
+  Komponente integriertes Steuergerät gesteuert. = Mechatronik im funktionalen und räumlichen Sinn
+\end{description}
+untersch. Getriebetypen und Motoren $\rightarrow$ Vielfalt $\rightarrow$ Full Powertrain ist 
+zu spezifisch - Antriebsstränge mit Mechatronic Modules besser, da einfacher 
+kombinierbar; ??
 
-\subsection{Welche Aktuatoren und Sensoren sind zur Steuerung eines Automatikgetriebes notwendig? Wie sieht die Topologie dieser Komponenten inkl. Steuerger\"at bei einem ``Mechatronic Transmission Module'' im Vergleich zur ``Stand alone''-Architektur aus?}
+\subsection{Welche Aktuatoren und Sensoren sind zur Steuerung eines Automatikgetriebes notwendig? Wie sieht die Topologie dieser Komponenten inkl. Steuerger\"at bei einem ``Mechatronic Transmission Module'' im Vergleich zur ``Stand alone''-Architektur aus? (S.150,168,171-173)}
+{\bf Aktoren:} Ventile (bzw. hydraulisch betätigte Kupplungen und Bremsen) \\
+{\bf Sensoren:} Drehzahlsensoren, Wählbereichssensor (welchen Fahrbereich hat Fahrer gewählt?), 
+event. (Öl-)Drucksensoren, Öltemperatursensor
 
-\subsection{Worin liegen Vor- und Nachteile eines ``Mechatronic Transmission Modules'' im Vergleich zur ``Stand alone''-Architektur?}
+{\bf Stand alone:} Sensoren werden direkt ans Getriebe angebracht und mittels Stecker zum 
+Steuergerät verbunden; \\
+{\bf Mechatronic transmission module:} Sensoren und Steuergerät sind direkt am Getriebe platziert
+(keine Stecker nötig, oft: Sensoren bereits im Steuergerät integriert);
 
-\subsection{Beschreiben Sie die Potential- und Signalverteilung mittels Flexfolie in Getriebesteuerungen. Welche Vorteile bietet diese Technologie?}
+\subsection{Worin liegen Vor- und Nachteile eines ``Mechatronic Transmission Modules'' im Vergleich zur ``Stand alone''-Architektur? (S.167,169)}
++ kein redundantes Packaging \\
++ kleiner, leichter \\
++ verbesserte Zuverlässigkeit (zB weniger Stecker) \\
++ geringere Kosten (System und Montage) \\
++ Toleranzanforderungen können entschärft werden (zB Kalibrierung/Abgleich direkt am Getriebe)
+
+Nachteile ?? \\
+- aufwendige Herstellung \\
+- Standard gewünscht (für die Kombination von versch. Motoren, ...)
+
+\subsection{Beschreiben Sie die Potential- und Signalverteilung mittels Flexfolie in Getriebesteuerungen. Welche Vorteile bietet diese Technologie? (S.174-175)}
+FPCB wird auf Aluboden auflaminiert
+
++ Schnelle und kostengünstige Änderbarkeit \\
++ Variables Elektronikraumkonzept \\
++ Minimierung Verbindungstechnologien (Bonden, Laserschweißen) \\
++ Minimierung Kontaktstellen \\
++ Toleranzausgleich Stecker, Positionssensor \\
++ Ventilkontaktierung über Federkontakte \\
++ Unterschiedliche Kontakt-Ebenen \\
++ Span-! Kurzschluss-! Kontaktkorrosionsschutz \\
++ Optimiert für die Bedingungen im Getriebe (Temperatur, Vibration, ATF)
 
 \subsection{Wie kann das thermische Verhalten eines im/am Aggregat verbauten Steuerger\"ates analysiert werden? Beschreiben Sie dies beispielhaft f\"ur eine getriebeintegrierte elektronische Steuerung.}
 
