@@ -48,6 +48,28 @@ FPCB wird auf Aluboden auflaminiert
 + Span-! Kurzschluss-! Kontaktkorrosionsschutz \\
 + Optimiert für die Bedingungen im Getriebe (Temperatur, Vibration, ATF)
 
-\subsection{Wie kann das thermische Verhalten eines im/am Aggregat verbauten Steuerger\"ates analysiert werden? Beschreiben Sie dies beispielhaft f\"ur eine getriebeintegrierte elektronische Steuerung.}
+\subsection{Wie kann das thermische Verhalten eines im/am Aggregat verbauten Steuerger\"ates analysiert werden? Beschreiben Sie dies beispielhaft f\"ur eine getriebeintegrierte elektronische Steuerung. (S.151,180)}
+\begin{description}
+\item[Finite Elements Method:] Modellierung des Umfeldes im Getriebe und/oder Simulation;
+  \begin{itemize}
+  \item Ermittlung von Hotspots
+  \item Definition von Grenztemperaturen (Berechnung der Maximaltemperaturen der bare dies unter 
+    worst-case Bedingungen vor Abschluss des Layouts)
+  \item Auslegung Wärmehaushalt
+  \end{itemize}
+\item[Verification of FEM Calculations:] Messung er Temperatur der bare dies durch eine Infrarot-
+  Kamera - damit wird die Berechnung mittels \emph{Finite Elements Method} verifiziert;
+\end{description}
 
-\subsection{Beschreiben Sie die Funktionserweiterungen durch Elektronik bei der Steuerung eines Automatikgetriebes und nennen Sie Beispiele f\"ur solche Spezialfunktionen.}
+\subsection{Beschreiben Sie die Funktionserweiterungen durch Elektronik bei der Steuerung eines Automatikgetriebes und nennen Sie Beispiele f\"ur solche Spezialfunktionen. (S.151)}
+{\bf Adaptive Transmission Control:} durch fuzzy rulebase wird die Gangauswahl bzw. die 
+Schaltkennlinie gewählt \emph{Shift Pattern Selection} \\
++ dynamische Korrektur (Zufahren zu einer Ampel/Stoptafel, Kurvenfahrt, Gas- und 
+Bremspedaldynamik, ...)
+
+\emph{Shift Pattern Selection} zB abhängig von Steigung, Anhänger, ...
+
+%anstatt Hydraulik $\rightarrow$ Elektronik / frei programmierbare Steuerung: \\
+%+ Sicherheit \\
+%+ Verbrauch \\
+%+ Komfort
